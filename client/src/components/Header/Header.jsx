@@ -5,7 +5,7 @@ import {NavLink, Link} from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './header.css';
 
-const nav__links =[
+const nav__links = [
 {
     path:'/home',
     display:'Home'
@@ -20,11 +20,11 @@ const nav__links =[
 },
 ]
 
-const Header = () =>{
+const Header = () => {
 
 const headerRef = useRef(null)
 
-const stickyHeaderFunc = () =>{
+const stickyHeaderFunc = () => {
     window.addEventListener('scroll', ()=>{
         if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
             headerRef.current.classList.add('sticky__header')
@@ -45,14 +45,9 @@ useEffect(()=>{
         <Container>
             <Row>
                 <div className="nav__wrapper d-flex">
-
-                    {/* ================ logo =================== */}
                     <div className="logo">
                         <img src={logo} alt=""/>
                     </div>
-                    {/* ================ logo end =================== */}
-
-                    {/* ================ menu start =================== */}
                     <div className="navigation">
                         <ul className="menu d-flex align-items-center gap-5">
                             {
@@ -64,8 +59,6 @@ useEffect(()=>{
                             }
                         </ul>
                     </div>
-                    {/* ================ menu end =================== */}
-
                     <div className="nav__right d-flex align-items-center gap-4">
                         <div className="nav__btns d-flex align-items-center gap-4">
                             <Button className="btn secondary__btn"><Link to='/login'>Login</Link></Button>

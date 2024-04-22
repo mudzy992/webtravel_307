@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import './search-bar.css';
-import {Col, Form, FormGroup} from "reactstrap";
+import {Button, Col, Form, FormGroup} from "reactstrap";
 
 const SearchBar = ()=>{
 
@@ -17,7 +17,6 @@ const SearchBar = ()=>{
             return alert('All fields are required!');
         }
     }
-
 
     return <Col lg='12'>
         <div className="search__bar">
@@ -41,7 +40,7 @@ const SearchBar = ()=>{
                    </div>
                 </FormGroup>
                 <span className="search__icon" type="submit" onClick={searchHandler}>
-                    <button>Search</button>
+                    <Button >Search</Button>
                 </span>
             </Form>
         </div>
